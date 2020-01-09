@@ -16,5 +16,5 @@ class Mod_login extends CI_Model{
 		function cek_login_admin($table,$where){		
 		return $this->db->get_where($table,$where);
 	}
-	}	
+}	
 

@@ -29,7 +29,7 @@
     <div class="card-body login-card-body"  style="background: transparent;">
       <p class="login-box-msg">Sign in to start your session</p>
 
-      <form action="dashboard" method="post">
+      <form action="<?php echo base_url('login/aksi_login');?>" method="post">
         <div class="input-group mb-3">
           <input class="form-control" type="text" name="username" placeholder="Username">
           <div class="input-group-append">
@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" nama="password" placeholder="Password">
+          <input type="password" class="form-control" name="password" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -47,19 +47,23 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-8">
+      <!--     <div class="col-8">
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
                 Remember Me
               </label>
             </div>
-          </div>
+          </div> -->
           <!-- /.col -->
-          <div class="col-4">
+          <div class="col-lg-12">
             <button type="submit" class="btn btn-primary btn-block">
             Login
             </button>
+            <div class="text-center">
+            <label class="badge badge-danger" style="font-family: Century Gothic;"><?php echo $this->session->flashdata('item'); ?>
+            </label>
+            </div>
           </div>
           <!-- /.col -->
         </div>
